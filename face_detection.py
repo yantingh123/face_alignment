@@ -20,6 +20,7 @@ def visualize_landmark(image_array, landmarks):
     draw = ImageDraw.Draw(origin_img)
     for facial_feature in landmarks.keys():
         draw.point(landmarks[facial_feature])
+    origin_img = np.array(origin_img)
     origin_img = cv2.cvtColor(origin_img, cv2.COLOR_RGBA2BGR)
     imshow(origin_img)
 
